@@ -1,8 +1,8 @@
-import Alexa from 'ask-sdk-model';
-import Messages from '../constants/Messages';
-import Metronome from '../Metronome';
-import IntentsHandlers from './Intents';
-import LifeCyclesHandlers from './LifeCycles';
+const Alexa = require('ask-sdk-model');
+const Messages = require('../constants/Messages');
+const Metronome = require('../Metronome');
+const IntentsHandlers = require('./Intents');
+const LifeCyclesHandlers = require('./LifeCycles');
 
 function handlersFactory() {
   const messages = new Messages();
