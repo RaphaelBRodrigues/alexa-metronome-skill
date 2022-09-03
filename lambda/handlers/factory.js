@@ -1,5 +1,5 @@
 const Alexa = require('ask-sdk-core');
-const Metronome = require('../Metronome');
+const Metronome = require('../entities/Metronome');
 const IntentsHandlers = require('./Intents');
 const LifeCyclesHandlers = require('./LifeCycles');
 
