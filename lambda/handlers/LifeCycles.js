@@ -5,9 +5,11 @@ const LifeCyclesHandlers = (alexa, messages) => {
       },
       handle(handlerInput) {
         const speakOutput = messages.LAUNCH_MESSAGE;
+        const requestOutput = messages.REQUEST_RESPONSE
 
         return handlerInput.responseBuilder
           .speak(speakOutput)
+          .speak(REQUEST_ANSWER)
           .reprompt(speakOutput)
           .getResponse();
     }
