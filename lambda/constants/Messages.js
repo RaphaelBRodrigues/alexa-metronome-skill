@@ -1,5 +1,5 @@
 const Messages = () => {
-  const LAUNCH_MESSAGE = "Olá, a quantos BPM você gostaria de tocar?";
+  const LAUNCH_MESSAGE = "Iniciando metrônomo";
   const ERROR_HANDLER = "Até mais!";
 
   return {
