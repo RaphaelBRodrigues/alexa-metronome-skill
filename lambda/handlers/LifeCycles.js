@@ -1,10 +1,4 @@
-const Messages = require("../constants/Messages");
-
-const LifeCyclesHandlers = () => {
-  constructor(alexa, messages) {
-    this.alexa = alexa;
-    this.messages = messages;
-  };
+const LifeCyclesHandlers = (alexa, messages) => {
   const launchRequest = () => {
     return {
       canHandle(handlerInput) {
