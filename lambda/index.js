@@ -4,12 +4,12 @@
  * session persistence, api calls, and more.
  * */
 const Alexa = require('ask-sdk-core');
-// const handlersFactory = require('./handlers/factory');
+const handlersFactory = require('./handlers/factory');
 
-// const {
-//     lifeCyclesHandlers,
-//     intentHandlers
-// } = handlersFactory();
+const {
+    lifeCyclesHandlers,
+    intentHandlers
+} = handlersFactory();
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
