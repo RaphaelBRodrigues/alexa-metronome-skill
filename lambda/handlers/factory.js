@@ -1,22 +1,26 @@
-import Alexa from 'ask-sdk-model';
-import Messages from '../constants/Messages';
-import Metronome from '../Metronome';
-import IntentsHandlers from './Intents';
-import LifeCyclesHandlers from './LifeCycles';
+class IntentsHandlers {
+  alexa;
+  messages;
 
-function handlersFactory() {
-  const messages = new Messages();
-  const metronome = new Metronome();
+  constructor(alexa, messages, metronome) {
+    this.alexa = alexa;
+    this.messages = messages;
+    this.metronome = metronome;
+  }
 
-  const intentHandlers = new IntentsHandlers(Alexa, messages, metronome);
-  const lifeCyclesHandlers = new LifeCyclesHandlers(Alexa, messages);
+  openMetronome() {
+    return {
+      canHandle(handleInput) {
+        const matchIntent = true;
+        const matchRequestType = this.alexa;
 
+        return matchIntent && matchRequestType;
+      },
+      handle() {
 
-  return {
-    lifeCyclesHandlers,
-    intentHandlers
-  };
+      }
+    }
+  }
 }
 
-
-export default handlersFactory;
+module.exports = IntentsHandlers;
