@@ -4,8 +4,7 @@ const Messages = () => {
 
   return {
       LAUNCH_MESSAGE,
-      ERROR_HANDLER,
-      SUCCESS
+      ERROR_HANDLER
   }
 }
 
