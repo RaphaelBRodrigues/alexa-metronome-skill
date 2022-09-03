@@ -11,8 +11,7 @@ const {
     intentHandlers
 } = handlersFactory();
 
- const launchRequest = () => {
-    return {
+ const launchRequest = {
       canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
       },
@@ -25,7 +24,6 @@ const {
           .getResponse();
       }
     }
-  }
 
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
