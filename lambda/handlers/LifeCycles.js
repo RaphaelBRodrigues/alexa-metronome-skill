@@ -7,7 +7,7 @@ const LifeCyclesHandlers = (alexa) => {
       return alexa.getRequestType(handlerInput.requestEnvelope) === RequestTypes.LAUNCH;
     },
     handle(handlerInput) {
-      const speakOutput = Messages.REQUEST_ANSWER;
+      const speakOutput = Messages.REQUEST_BPM;
 
       return handlerInput.responseBuilder
         .speak(speakOutput)
