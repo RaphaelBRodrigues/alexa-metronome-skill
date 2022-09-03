@@ -1,3 +1,3 @@
-const Metronome => () => { }
+const Metronome = () => { }
 
 module.exports = Metronome;
