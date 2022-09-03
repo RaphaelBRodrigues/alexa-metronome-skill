@@ -1,16 +1,23 @@
 class IntentsHandlers {
-  constructor(alexa, messages) {
+  alexa;
+  messages;
+
+  constructor(alexa, messages, metronome) {
     this.alexa = alexa;
     this.messages = messages;
+    this.metronome = metronome;
   }
 
-  metronome() {
+  openMetronome() {
     return {
       canHandle(handleInput) {
         const matchIntent = true;
-        const matchRequestType = this.alexa;
+        const matchRequestType = Alexa;
 
         return matchIntent && matchRequestType;
+      },
+      handle() {
+
       }
     }
   }
