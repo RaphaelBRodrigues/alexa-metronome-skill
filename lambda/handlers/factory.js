@@ -19,4 +19,4 @@ function handlersFactory() {
 }
 
 
-module.exports = handlersFactory;
+export default handlersFactory;

@@ -1,4 +1,7 @@
 class IntentsHandlers {
+  alexa;
+  messages;
+
   constructor(alexa, messages, metronome) {
     this.alexa = alexa;
     this.messages = messages;
