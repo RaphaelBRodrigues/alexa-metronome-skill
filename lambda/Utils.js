@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');
 
 function getSlotIntentsValue(handlerInput, slotName) {
-    return handlerInput.requestEnvelope.request.intent.slots[slotName]
+    return handlerInput.requestEnvelope.request.intent.slots[slotName].value
 }
 
 async function getS3Object(objectKey) {
