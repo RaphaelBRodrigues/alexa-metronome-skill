@@ -35,5 +35,4 @@ class LifeCyclesHandlers {
     }
   }
 }
-
 module.exports = LifeCyclesHandlers;
