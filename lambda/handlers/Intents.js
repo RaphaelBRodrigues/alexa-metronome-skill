@@ -5,7 +5,7 @@ const IntentsHandlers = (alexa, messages, metronome) => {
                 && alexa.getIntentName(handlerInput.requestEnvelope) === 'BPMIntent';
     },
      handle(handlerInput) {
-        const speakOutput = 'Hello World!';
+        const speakOutput = messages.SUCCESS;
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -15,7 +15,7 @@ const IntentsHandlers = (alexa, messages, metronome) => {
   };
   
   return {
-      openMetronome
+      startMetronome
   }
 }
 
