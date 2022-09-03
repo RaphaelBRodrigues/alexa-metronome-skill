@@ -30,7 +30,7 @@ const {
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         launchRequest,
-        intentHandlers.openMetronome,
+        //intentHandlers.openMetronome,
     )
     .addErrorHandlers(
         lifeCyclesHandlers.error
