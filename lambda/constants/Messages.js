@@ -1,6 +1,6 @@
 const Messages = () => {
   const LAUNCH_MESSAGE = "Iniciando metrônomo";
-  const ERROR_HANDLER = "Até mais!";
+  const ERROR_HANDLER = "Algo deu errado, Até mais!";
 
   return {
       LAUNCH_MESSAGE,
