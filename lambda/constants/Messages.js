@@ -4,4 +4,4 @@ class Messages {
   ERROR_HANDLER = "Até mais!";
 }
 
-export default Messages;
+module.exports = Messages;
