@@ -44,7 +44,7 @@ exports.handler = Alexa.SkillBuilders.custom()
         // intentHandlers.openMetronome,
     )
     .addErrorHandlers(
-        lifeCyclesHandlers.error
+        error
     )
     .withCustomUserAgent('sample/hello-world/v1.2')
     .lambda();
