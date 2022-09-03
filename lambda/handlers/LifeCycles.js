@@ -9,7 +9,7 @@ const LifeCyclesHandlers = (alexa, messages) => {
 
         return handlerInput.responseBuilder
           .speak(speakOutput)
-          .speak(REQUEST_ANSWER)
+          .speak(requestOutput)
           .reprompt(speakOutput)
           .getResponse();
     }
