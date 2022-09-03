@@ -2,10 +2,10 @@ const IntentsHandlers = (alexa, messages, metronome) => {
   const openMetronome = () => {
     return {
      canHandle(handlerInput) {
-            return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-                && Alexa.getIntentName(handlerInput.requestEnvelope) === 'MetronomoIntent';
+            return alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+                && alexa.getIntentName(handlerInput.requestEnvelope) === 'MetronomoIntent';
     },
-      handle() {
+     handle(handlerInput) {
         const speakOutput = 'Hello World!';
 
         return handlerInput.responseBuilder
