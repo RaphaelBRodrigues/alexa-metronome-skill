@@ -1,4 +1,4 @@
-const Alexa = require('ask-sdk-model');
+const Alexa = require('ask-sdk-core');
 const Messages = require('../constants/Messages');
 const Metronome = require('../Metronome');
 const IntentsHandlers = require('./Intents');
