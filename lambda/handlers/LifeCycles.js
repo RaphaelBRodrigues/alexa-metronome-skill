@@ -13,8 +13,7 @@ const LifeCyclesHandlers = (alexa, messages) => {
     }
   };
   
-  const error = () => {
-    return {
+  const error = {
       canHandle() {
         return true;
       },
@@ -24,7 +23,6 @@ const LifeCyclesHandlers = (alexa, messages) => {
         return handlerInput.responseBuilder
           .speak(messages.ERROR_HANDLER)
       }
-    }
   };
   
   return {
