@@ -1,35 +1,32 @@
 const LifeCyclesHandlers = (alexa, messages) => {
   const launchRequest = {
-      canHandle(handlerInput) {
-        return alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
-      },
-      handle(handlerInput) {
-        const speakOutput = messages.LAUNCH_MESSAGE;
-        const requestOutput = messages.REQUEST_RESPONSE
+    canHandle(handlerInput) {
+      return alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
+    },
+    handle(handlerInput) {
+      const speakOutput = messages.LAUNCH_MESSAGE + " " + messages.REQUEST_ANSWER;
 
-        return handlerInput.responseBuilder
-          .speak(speakOutput)
-          .speak(requestOutput)
-          .reprompt(speakOutput)
-          .reprompt(requestOutput)
-          .getResponse();
+      return handlerInput.responseBuilder
+        .speak(speakOutput)
+        .reprompt(speakOutput)
+        .getResponse();
     }
   };
-  
-  const error = {
-      canHandle() {
-        return true;
-      },
-      handle(handlerInput, error) {
-        console.error(error);
 
-        return handlerInput.responseBuilder
-          .speak(messages.ERROR_HANDLER)
-      }
+  const error = {
+    canHandle() {
+      return true;
+    },
+    handle(handlerInput, error) {
+      console.error(error);
+
+      return handlerInput.responseBuilder
+        .speak(messages.ERROR_HANDLER)
+    }
   };
-  
+
   return {
-      launchRequest, error
+    launchRequest, error
   }
 }
 
