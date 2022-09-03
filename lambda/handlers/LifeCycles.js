@@ -11,7 +11,7 @@ const LifeCyclesHandlers = (alexa, messages) => {
           .reprompt(speakOutput)
           .getResponse();
     }
-  }};
+  };
   
   const error = {
       canHandle() {
