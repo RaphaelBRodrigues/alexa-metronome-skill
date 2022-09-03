@@ -12,7 +12,7 @@ class IntentsHandlers {
     return {
       canHandle(handleInput) {
         const matchIntent = true;
-        const matchRequestType = Alexa;
+        const matchRequestType = this.alexa;
 
         return matchIntent && matchRequestType;
       },
@@ -23,4 +23,4 @@ class IntentsHandlers {
   }
 }
 
-module.exports = IntentsHandlers;
+export default IntentsHandlers;
