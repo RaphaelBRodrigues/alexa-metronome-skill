@@ -41,10 +41,10 @@ const launchRequest = {
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         lifeCyclesHandlers.launchRequest,
-        // intentHandlers.openMetronome,
+        intentHandlers.openMetronome,
     )
     .addErrorHandlers(
-        error
+        lifeCyclesHandlers.error
     )
     .withCustomUserAgent('sample/hello-world/v1.2')
     .lambda();
