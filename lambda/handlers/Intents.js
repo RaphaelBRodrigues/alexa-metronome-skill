@@ -2,7 +2,7 @@ const IntentsHandlers = (alexa, messages, metronome) => {
   const openMetronome = {
      canHandle(handlerInput) {
             return alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-                && alexa.getIntentName(handlerInput.requestEnvelope) === 'MetronomoIntent';
+                && alexa.getIntentName(handlerInput.requestEnvelope) === 'BPMIntent';
     },
      handle(handlerInput) {
         const speakOutput = 'Hello World!';
