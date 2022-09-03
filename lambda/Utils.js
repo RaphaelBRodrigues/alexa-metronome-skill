@@ -19,5 +19,6 @@ async function getS3Object(objectKey) {
 }
 
 module.exports = {
-    getS3Object
+    getS3Object,
+    getSlotIntentsValue
 }
