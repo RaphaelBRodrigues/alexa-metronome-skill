@@ -29,4 +29,5 @@ const LifeCyclesHandlers = (alexa, messages) => {
       launchRequest, error
   }
 }
+
 module.exports = LifeCyclesHandlers;
