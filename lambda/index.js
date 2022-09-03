@@ -138,18 +138,13 @@ const ErrorHandler = {
 
 const MetronomoIntentHandler = {
     canHandle(handlerInput) {
-        console.log(handlerInput);
-        return true;
-        // return Alexa.getRequestType(handlerInput.requestEnvelope) === "MetronomoIntent"
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === "MetronomoIntent"
     },
     handler(handlerInput, error) {
-        const output = 'Olá Raphael';
-        console.log(handlerInput, error);
-        
-        return handlerInput.responseBuilder
-            .speak(output)
-            .reprompt(output)
-            .getResponse()
+  const speakOutput = ‘Coloque a frase que a alexa irá falar para o usuário’;
+return handlerInput.responseBuilder
+.speak(speakOutput)
+.getResponse();
     }
 }
 
