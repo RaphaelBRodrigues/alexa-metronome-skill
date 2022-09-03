@@ -1,9 +1,6 @@
 const Messages = require("../constants/Messages");
 
 class LifeCyclesHandlers {
-  alexa
-  messages;
-
   constructor(alexa, messages) {
     this.alexa = alexa;
     this.messages = messages;
@@ -12,7 +9,7 @@ class LifeCyclesHandlers {
   launchRequest() {
     return {
       canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
+        return this.alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
       },
       handle(handlerInput) {
         const speakOutput = Messages.LAUNCH_MESSAGE;
@@ -39,4 +36,4 @@ class LifeCyclesHandlers {
   }
 }
 
-export default LifeCyclesHandlers;
+module.exports = LifeCyclesHandlers;
