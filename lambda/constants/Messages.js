@@ -5,7 +5,8 @@ const Messages = () => {
 
   return {
       LAUNCH_MESSAGE,
-      ERROR_HANDLER
+      ERROR_HANDLER,
+      REQUEST_ANSWER
   }
 }
 
