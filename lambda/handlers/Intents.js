@@ -5,8 +5,8 @@ const IntentsHandlers = (alexa, messages, metronome) => {
                 && alexa.getIntentName(handlerInput.requestEnvelope) === 'BPMIntent';
     },
      handle(handlerInput) {
-        const speakOutput = messages.SUCCESS;
-        const slotValue =  getSlotIntentsValue(handlerInput, "BPM")
+        const bpm =  getSlotIntentsValue(handlerInput, "BPM");
+        const speakOutput = `Tocando a ${bpm} BPMs`;
         
         return handlerInput.responseBuilder
             .speak(speakOutput)
