@@ -1,8 +1,8 @@
 const Messages = require("../constants/Messages");
 
 class LifeCyclesHandlers {
-  alexa;
-  messages;
+  alexa,
+  messages,
 
   constructor(alexa, messages) {
     this.alexa = alexa;
