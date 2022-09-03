@@ -2,7 +2,7 @@ const IntentsLabels = require('../constants/Intents.js');
 const RequestTypes = require('../constants/RequestTypes.js');
 const {
     getSlotIntentsValue
-} = require('../Utils.js')
+} = require('../utils')
 
 const IntentsHandlers = (alexa, metronome) => {
     const startMetronome = {
