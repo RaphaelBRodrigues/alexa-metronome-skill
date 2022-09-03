@@ -1,5 +1,5 @@
 const IntentsHandlers = (alexa, messages, metronome) => {
-  openMetronome() {
+  const openMetronome = () => {
     return {
       canHandle(handleInput) {
         const matchIntent = true;
@@ -11,7 +11,8 @@ const IntentsHandlers = (alexa, messages, metronome) => {
 
       }
     }
-  }
+  };
+  
   return {
       openMetronome
   }
