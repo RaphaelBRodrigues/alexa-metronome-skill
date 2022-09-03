@@ -21,6 +21,7 @@ const LaunchRequestHandler = {
 
 const HelloWorldIntentHandler = {
     canHandle(handlerInput) {
+        console.log({handlerInput})
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'MetronomoIntent';
     },
