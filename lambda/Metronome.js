@@ -1,3 +1,3 @@
-class Metronome { }
+const Metronome => ()  => { }
 
 export default Metronome;
