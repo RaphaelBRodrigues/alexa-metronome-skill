@@ -1,5 +1,5 @@
 const {
-    
+    getSlotIntentsValue
 } = require('../Utils.js')
 
 const IntentsHandlers = (alexa, messages, metronome) => {
