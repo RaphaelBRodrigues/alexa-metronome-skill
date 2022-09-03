@@ -6,7 +6,8 @@ const IntentsHandlers = (alexa, messages, metronome) => {
     },
      handle(handlerInput) {
         const speakOutput = messages.SUCCESS;
-
+        const slotValue =  getSlotIntentsValue(handlerInput, "BPM")
+        
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
