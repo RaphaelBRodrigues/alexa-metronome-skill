@@ -11,19 +11,6 @@ const {
     intentHandlers
 } = handlersFactory();
 
- const launchRequest = {
-      canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
-      },
-      handle(handlerInput) {
-        const speakOutput = "messages.LAUNCH_MESSAGE";
-
-        return handlerInput.responseBuilder
-          .speak(speakOutput)
-          .reprompt(speakOutput)
-          .getResponse();
-      }
-    }
 
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
