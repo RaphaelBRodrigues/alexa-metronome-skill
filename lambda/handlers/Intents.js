@@ -1,13 +1,13 @@
+const IntentsLabels = require('../constants/Intents.js');
+const RequestTypes = require('../constants/RequestTypes.js');
 const {
     getSlotIntentsValue
 } = require('../Utils.js')
 
-const IntentsLabels = require('../constants/Intents');
-
-const IntentsHandlers = (alexa, messages, metronome) => {
+const IntentsHandlers = (alexa, metronome) => {
     const startMetronome = {
         canHandle(handlerInput) {
-            return alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            return alexa.getRequestType(handlerInput.requestEnvelope) === RequestTypes.INTENT
                 && alexa.getIntentName(handlerInput.requestEnvelope) === IntentsLabels.INIT_METRONOME;
         },
         handle(handlerInput) {

@@ -1,10 +1,13 @@
-const LifeCyclesHandlers = (alexa, messages) => {
+const Messages = require("../constants/Messages");
+const RequestTypes = require("../constants/RequestTypes");
+
+const LifeCyclesHandlers = (alexa) => {
   const launchRequest = {
     canHandle(handlerInput) {
-      return alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
+      return alexa.getRequestType(handlerInput.requestEnvelope) === RequestTypes.LAUNCH;
     },
     handle(handlerInput) {
-      const speakOutput = messages.LAUNCH_MESSAGE + " " + messages.REQUEST_ANSWER;
+      const speakOutput = Messages.LAUNCH_MESSAGE + " " + Messages.REQUEST_ANSWER;
 
       return handlerInput.responseBuilder
         .speak(speakOutput)
