@@ -11,6 +11,7 @@ const LifeCyclesHandlers = (alexa, messages) => {
           .speak(speakOutput)
           .speak(requestOutput)
           .reprompt(speakOutput)
+          .reprompt(requestOutput)
           .getResponse();
     }
   };
