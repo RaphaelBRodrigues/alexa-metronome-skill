@@ -5,11 +5,11 @@ const IntentsHandlers = require('./Intents');
 const LifeCyclesHandlers = require('./LifeCycles');
 
 function handlersFactory() {
-  const messages = new Messages();
-  const metronome = new Metronome();
+  const messages = Messages();
+  const metronome = Metronome();
 
-  const intentHandlers = new IntentsHandlers(Alexa, messages, metronome);
-  const lifeCyclesHandlers = new LifeCyclesHandlers(Alexa, messages);
+  const intentHandlers = IntentsHandlers(Alexa, messages, metronome);
+  const lifeCyclesHandlers = LifeCyclesHandlers(Alexa, messages);
 
 
   return {
