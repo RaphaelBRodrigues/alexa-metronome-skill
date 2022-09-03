@@ -6,10 +6,10 @@
 const Alexa = require('ask-sdk-core');
 const handlersFactory = require('./handlers/factory');
 
-// const {
-//     lifeCyclesHandlers,
-//     intentHandlers
-// } = handlersFactory();
+const {
+    lifeCyclesHandlers,
+    intentHandlers
+} = handlersFactory();
 
 const launchRequest = {
       canHandle(handlerInput) {
