@@ -24,7 +24,7 @@ const LifeCyclesHandlers = (alexa, messages) => {
         console.error(error);
 
         return handlerInput.responseBuilder
-          .speak(Messages.ERROR_HANDLER)
+          .speak(messages.ERROR_HANDLER)
       }
     }
   };
