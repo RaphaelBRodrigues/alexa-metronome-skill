@@ -1,6 +1,6 @@
 const RequestTypes = {
   LAUNCH: "LaunchRequest",
-  INTENT: "LaunchRequest",
+  INTENT: "IntentRequest",
 }
 
 module.exports = RequestTypes;
