@@ -1,7 +1,7 @@
 const Messages = () => {
-  const LAUNCH_MESSAGE = "Olá, a quantos BPM você gostaria de tocar?";
-  const ERROR_HANDLER = "Até mais!";
-  const SUCCESS = "Ok!";
+  const LAUNCH_MESSAGE = () => "Olá, a quantos BPM você gostaria de tocar?";
+  const ERROR_HANDLER = () => "Até mais!";
+  const SUCCESS = () => "Tocando a";
   
   return {
       LAUNCH_MESSAGE,
