@@ -1,3 +1,3 @@
-const Metronome => ()  => { }
+const Metronome => () => { }
 
-export default Metronome;
+module.exports = Metronome;
