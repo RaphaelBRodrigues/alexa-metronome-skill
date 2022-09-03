@@ -1,13 +1,4 @@
-class IntentsHandlers {
-  alexa;
-  messages;
-
-  constructor(alexa, messages, metronome) {
-    this.alexa = alexa;
-    this.messages = messages;
-    this.metronome = metronome;
-  }
-
+const IntentsHandlers = (alexa, messages, metronome) => {
   openMetronome() {
     return {
       canHandle(handleInput) {
@@ -20,6 +11,9 @@ class IntentsHandlers {
 
       }
     }
+  }
+  return {
+      openMetronome
   }
 }
 
