@@ -1,3 +1,5 @@
+const dasdas = require('../Utils.js')
+
 const IntentsHandlers = (alexa, messages, metronome) => {
   const startMetronome = {
      canHandle(handlerInput) {
