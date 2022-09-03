@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
 
-async function getS3Object(s3ObjectKey) {
+async function getS3Object(objectKey) {
     const s3 = new AWS.S3();
     const params = {
         Bucket: process.env.S3_PERSISTENCE_BUCKET,
