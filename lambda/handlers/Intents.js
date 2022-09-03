@@ -8,8 +8,7 @@ class IntentsHandlers {
     return {
       canHandle(handleInput) {
         const matchIntent = true;
-        const matchRequestType = this.alexa
-        ;
+        const matchRequestType = this.alexa;
 
         return matchIntent && matchRequestType;
       }
