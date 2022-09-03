@@ -33,7 +33,7 @@ const launchRequest = {
         console.error(error);
 
         return handlerInput.responseBuilder
-          .speak(messages.ERROR_HANDLER)
+          .speak("Messages.ERROR_HANDLER")
       }
   };
 
