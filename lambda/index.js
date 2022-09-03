@@ -138,6 +138,7 @@ const ErrorHandler = {
 
 const MetronomoIntentHandler = {
     canHandle(handlerInput) {
+        console.log(handlerInput)
         return Alexa.getRequestType(handlerInput.requestEnvelope) === "MetronomoIntent"
     },
     handler(handlerInput, error) {
