@@ -136,6 +136,21 @@ const ErrorHandler = {
     }
 };
 
+const MetronomoIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === "MetronomoIntentHandler"
+    },
+    handler(handlerInput, error) {
+        const output = 'Olá Raphael';
+        console.log(handlerInput, error);
+        
+        return handlerInput.responseBuilder
+            .speak(output)
+            .reprompt(output)
+            .getResponse()
+    }
+}
+
 /**
  * This handler acts as the entry point for your skill, routing all request and response
  * payloads to the handlers above. Make sure any new handlers or interceptors you've
@@ -146,6 +161,7 @@ exports.handler = Alexa.SkillBuilders.custom()
         LaunchRequestHandler,
         HelloWorldIntentHandler,
         HelpIntentHandler,
+        MetronomoIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
         SessionEndedRequestHandler,
