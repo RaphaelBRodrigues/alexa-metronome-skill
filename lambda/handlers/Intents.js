@@ -1,5 +1,5 @@
 const IntentsHandlers = (alexa, messages, metronome) => {
-  const openMetronome = {
+  const startMetronome = {
      canHandle(handlerInput) {
             return alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
                 && alexa.getIntentName(handlerInput.requestEnvelope) === 'BPMIntent';
