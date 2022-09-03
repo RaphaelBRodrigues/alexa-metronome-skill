@@ -6,10 +6,10 @@
 const Alexa = require('ask-sdk-core');
 const handlersFactory = require('./handlers/factory');
 
-const {
-    lifeCyclesHandlers,
-    intentHandlers
-} = handlersFactory();
+// const {
+//     lifeCyclesHandlers,
+//     intentHandlers
+// } = handlersFactory();
 
 const launchRequest = {
       canHandle(handlerInput) {
@@ -24,12 +24,24 @@ const launchRequest = {
           .getResponse();
     }
   };
+  
+    const error = {
+      canHandle() {
+        return true;
+      },
+      handle(handlerInput, error) {
+        console.error(error);
+
+        return handlerInput.responseBuilder
+          .speak(messages.ERROR_HANDLER)
+      }
+  };
 
 
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         launchRequest,
-        intentHandlers.openMetronome,
+        // intentHandlers.openMetronome,
     )
     .addErrorHandlers(
         lifeCyclesHandlers.error
