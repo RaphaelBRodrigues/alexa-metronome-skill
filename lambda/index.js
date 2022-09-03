@@ -138,7 +138,7 @@ const ErrorHandler = {
 
 const MetronomoIntentHandler = {
     canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === "MetronomoIntentHandler"
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === "MetronomoIntent"
     },
     handler(handlerInput, error) {
         const output = 'Olá Raphael';
