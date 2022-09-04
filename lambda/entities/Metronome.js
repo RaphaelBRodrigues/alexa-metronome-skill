@@ -1,4 +1,4 @@
-const playSound = require("../utils/palyAudio");
+const playAudio = require("../utils/playAudio");
 
 const Metronome = (alexa) => {
   return {
