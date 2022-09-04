@@ -11,8 +11,8 @@ const Metronome = (alexa) => {
     play(bpm, responseBuilder) {
       this.setBPM(bpm);
     
-      const tic = playAudio(responseBuilder, Sound.tic);
-      const tac = playAudio(responseBuilder, Sound.tac);
+    //   const tic = playAudio(responseBuilder, Sound.tic);
+    //   const tac = playAudio(responseBuilder, Sound.tac);
 
       return true;
     },
