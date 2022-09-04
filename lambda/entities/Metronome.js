@@ -1,4 +1,5 @@
 const playAudio = require("../utils/playAudio");
+const { Sound } = require("../constants/Resources") 
 
 const Metronome = (alexa) => {
   return {
@@ -10,8 +11,9 @@ const Metronome = (alexa) => {
     play(bpm, responseBuilder) {
       this.setBPM(bpm);
     
-      const audio = playAudio(responseBuilder);
-    
+      const tic = playAudio(responseBuilder, Sound.tic);
+      const tac = playAudio(responseBuilder, Sound.tac);
+
       return audio;
     },
     stop() {
