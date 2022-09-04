@@ -1,5 +1,6 @@
 const Alexa = require('ask-sdk-core');
 const handlersFactory = require('./handlers/factory');
+const { requestInterceptor, responseInterceptor } = require('./interceptors');
 
 const {
     lifeCyclesHandlers,
@@ -12,6 +13,8 @@ exports.handler = Alexa.SkillBuilders.custom()
         lifeCyclesHandlers.launchRequest,
         intentHandlers.startMetronome,
     )
+    .addRequestInterceptors(requestInterceptor)
+    .addResponseInterceptors(responseInterceptor)
     .addErrorHandlers(
         lifeCyclesHandlers.error
     )
