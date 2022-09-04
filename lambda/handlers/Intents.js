@@ -14,12 +14,12 @@ const IntentsHandlers = (alexa, metronome) => {
             const bpm = getSlotIntentsValue(handlerInput, "BPM");
             const speakOutput = `Tocando a ${bpm} BPMs`;
             
-            // const responseBuilder = handlerInput.responseBuilder
-            //     .speak(speakOutput)
+            const responseBuilder = handlerInput.responseBuilder
+                .speak(speakOutput)
     
             // const soundProccess = metronome.play(bpm, responseBuilder);
 
-            return handlerInput.responseBuilder
+            return responseBuilder
                 .speak(speakOutput)
                 .reprompt(speakOutput)
                 .getResponse();
