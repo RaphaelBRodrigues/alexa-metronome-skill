@@ -1,4 +1,4 @@
-const playAudio = require("../utils/playAudio");
+const { playAudio } = require("../utils");
 const { Sound } = require("../constants/Resources") 
 
 const Metronome = () => {
