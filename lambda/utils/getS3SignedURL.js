@@ -1,15 +1,21 @@
-const AWS = require('aws-sdk');
+const { S3Client, getSignedUrl } = require("aws-sdk");
 
-const s3SignedURLV4Client = new AWS.S3({
-    region: process.env.S3_PERSISTENCE_REGION
+const s3 = new AWS.S3({
+    
 })
 
 function getS3SignedURL(objectKey) {
-    const signedURL = s3SignedURLV4Client.getSignedUrl("getObject", {
+    return new Promise((resolve, reject) => {
+    s3.getSignedURL("putObject", {
         Bucket: process.S3_PERSISTENCE_BUCKET,
         Key: objectKey,
         Expires: 60
-    });
+    }).then((data) => {
+        resolve(data);
+    }).catch((err) => {
+        reject(err);
+    })
+    })
 
     return signedURL;
 }
