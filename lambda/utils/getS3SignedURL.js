@@ -1,8 +1,6 @@
 const AWS = require("aws-sdk");
 
-const s3 = new AWS.S3({
-
-})
+const s3 = new AWS.S3({})
 
 function getS3SignedURL(objectKey) {
     return new Promise((resolve, reject) => {
