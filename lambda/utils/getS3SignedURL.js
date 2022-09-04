@@ -6,7 +6,7 @@ const s3SignedURLV4Client = new AWS.S3({
 })
 
 function getS3SignedURL(objectKey) {
-    const signedURL = s3SignedURLV4Client.getS3SignedURL("getObject", {
+    const signedURL = s3SignedURLV4Client.getSignedUrl("getObject", {
         Bucket: process.S3_PERSISTENCE_BUCKET,
         Key: objectKey,
         Expires: 60
