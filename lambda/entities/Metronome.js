@@ -13,7 +13,7 @@ const Metronome = () => {
       const tic = playAudio(responseBuilder, Sound.tic);
       const tac = playAudio(responseBuilder, Sound.tac);
 
-      return true;
+      return tic;
     },
     stop() {
       return true;
