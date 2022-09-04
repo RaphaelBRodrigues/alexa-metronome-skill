@@ -14,17 +14,11 @@ const IntentsHandlers = (alexa, metronome) => {
             const bpm = getSlotIntentsValue(handlerInput, "BPM");
             const speakOutput = `Tocando a ${bpm} BPMs`;
 
+            const responseBuilder = handlerInput.responseBuilder.speak(speakOutput)
+            
             // const sound = await metronome.play(bpm, handlerInput.responseBuilder);
             
-            return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .addAudioPlayerPlayDirective("REPLACE_ALL",
-            "https://www.myinstants.com/media/sounds/untitled_1071.mp3",
-            "audio.token"
-            ,
-            0,
-            null)
-            .getResponse()
+            return responseBuilder.getResponse()
         }
     };
 
