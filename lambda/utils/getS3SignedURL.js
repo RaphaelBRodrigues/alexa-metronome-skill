@@ -9,7 +9,7 @@ async function getS3SignedURL(objectKey) {
     //     Expires: 60
     // });
 
-    return "signedURL";
+    return "https://65c698eb-204d-4832-9da4-13ac96cba516-us-east-1.s3.amazonaws.com/Media/sounds/tac.mp3";
 }
 
 
