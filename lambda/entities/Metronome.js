@@ -14,7 +14,7 @@ const Metronome = (alexa) => {
       const tic = playAudio(responseBuilder, Sound.tic);
       const tac = playAudio(responseBuilder, Sound.tac);
 
-      return audio;
+      return true;
     },
     stop() {
       return true;
