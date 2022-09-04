@@ -1,7 +1,8 @@
-const { getS3SignedURL } = require('.')
+// const { getS3SignedURL } = require('.')
 
 function playAudio(responseBuilder, audio) {
-  const url = "teste" || getS3SignedURL(audio.s3ObjectKey);
+  const url = "teste";
+  //getS3SignedURL(audio.s3ObjectKey);
   return url;
   // return responseBuilder.addAudioPlayerDirective("ENQUEUE", url, audio.token, audio.offsetInMilliseconds);
 }
