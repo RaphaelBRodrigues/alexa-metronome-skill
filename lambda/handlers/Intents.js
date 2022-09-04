@@ -15,11 +15,11 @@ const IntentsHandlers = (alexa, metronome) => {
             const speakOutput = `Tocando a ${bpm} BPMs`;
 
             const sound = await metronome.play(bpm, handlerInput.responseBuilder);
-
+            
             return handlerInput.responseBuilder
-                .speak(sound)
-                .reprompt(speakOutput)
-                .getResponse();
+            .speak(sound)
+            .addAudioPlayerDirective("ENQUEUE", "https://65c698eb-204d-4832-9da4-13ac96cba516-us-east-1.s3.amazonaws.com/Media/sounds/tac.mp3", "audio.token", 0)
+            .getResponse()
         }
     };
 
