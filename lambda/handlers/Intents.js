@@ -16,7 +16,7 @@ const IntentsHandlers = (alexa, metronome) => {
             
             const sound = metronome.play(bpm, handlerInput.responseBuilder);
 
-            return responseBuilder
+            return handlerInput.responseBuilder
                 .speak(sound)
                 .reprompt(speakOutput)
                 .getResponse();
