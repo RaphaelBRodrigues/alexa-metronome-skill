@@ -1,7 +1,6 @@
 const AWS = require('aws-sdk');
 
 const s3SignedURLV4Client = new AWS.S3({
-    signatureVersion: 'V4',
     region: process.env.S3_PERSISTENCE_REGION
 })
 
