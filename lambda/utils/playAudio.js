@@ -6,7 +6,7 @@ async function playAudio(responseBuilder, audio) {
       audio
   );
   console.log(url)
-  return responseBuilder.addAudioPlayerPlayDirective("ENQUEUE", url, audio.token, audio.offsetInMilliseconds);
+  return responseBuilder.addAudioPlayerPlayDirective("REPLACE_ALL", url, audio.token, audio.offsetInMilliseconds, null);
 }
 
 module.exports = playAudio;
