@@ -1,4 +1,4 @@
-const { getS3SignedURL } = require('./index')
+const getS3SignedURL = require('./getS3SignedURL')
 
 function playAudio(responseBuilder, audio) {
   const url = getS3SignedURL(audio.s3ObjectKey);
