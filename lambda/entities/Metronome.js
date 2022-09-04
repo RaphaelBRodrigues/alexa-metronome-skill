@@ -10,8 +10,6 @@ const Metronome = () => {
     async play(bpm, responseBuilder) {
       this.setBPM(bpm);
 
-    console.log("13")
-    console.log(responseBuilder)
        const tic = await playAudio(responseBuilder, Sound.tic);
       // const tac = await playAudio(responseBuilder, Sound.tac);
 
