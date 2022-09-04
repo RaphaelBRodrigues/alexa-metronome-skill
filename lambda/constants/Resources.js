@@ -1,14 +1,14 @@
 const Resources = {
     Sound: {
         tic: {
-            s3: {
-                filename: "/Media/sounds/tic.mp3"
-            }
+            url: "Media/sounds/tic.mp3",
+            token: "tic-sound",
+            offsetInMilliseconds: 0,
         },
         tac: {
-            s3: {
-                filename: "/Media/sounds/tac.mp3"
-            }
+            url: "Media/sounds/tac.mp3",
+            token: "tic-sound",
+            offsetInMilliseconds: 0,
         }
     }
 }
