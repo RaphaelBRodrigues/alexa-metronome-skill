@@ -14,3 +14,5 @@ function getS3SignedURL(objectKey) {
     
     return signedURL;
 }
+
+module.exports = getS3SignedURL;
