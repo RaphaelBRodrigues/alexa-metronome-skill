@@ -10,7 +10,7 @@ const Metronome = () => {
     async play(bpm, responseBuilder) {
       this.setBPM(bpm);
 
-      // const tic = await playAudio(responseBuilder, Sound.tic);
+       const tic = await playAudio(responseBuilder, Sound.tic);
       // const tac = await playAudio(responseBuilder, Sound.tac);
 
       return true;
