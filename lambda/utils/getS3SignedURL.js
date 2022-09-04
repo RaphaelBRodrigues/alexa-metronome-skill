@@ -7,7 +7,9 @@ async function getS3SignedURL(objectKey) {
         Bucket: process.env.S3_PERSISTENCE_BUCKET,
         Key: objectKey,
         Expires: 60
-    })
+    });
+
+    return signedURL;
 }
 
 

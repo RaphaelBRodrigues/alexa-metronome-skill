@@ -10,11 +10,11 @@ const IntentsHandlers = (alexa, metronome) => {
             return alexa.getRequestType(handlerInput.requestEnvelope) === RequestTypes.INTENT
                 && alexa.getIntentName(handlerInput.requestEnvelope) === IntentsLabels.INIT_METRONOME;
         },
-        handle(handlerInput) {
+        async handle(handlerInput) {
             const bpm = getSlotIntentsValue(handlerInput, "BPM");
             const speakOutput = `Tocando a ${bpm} BPMs`;
-            
-            const sound = metronome.play(bpm, handlerInput.responseBuilder);
+
+            const sound = await metronome.play(bpm, handlerInput.responseBuilder);
 
             return handlerInput.responseBuilder
                 .speak(sound)
