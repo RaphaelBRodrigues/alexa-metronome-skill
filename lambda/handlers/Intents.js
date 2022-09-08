@@ -20,7 +20,7 @@ const IntentsHandlers = (alexa, metronome) => {
             
             const audioFile = '<audio src="https://s3.amazonaws.com/cdn.dabblelab.com/audio/one-small-step-for-man.mp3" />';
 
-            const speakOutput = `<speak>Tocando a ${bpm} BPMs, ${audioFile}</speak>`;
+            const speakOutput = `<speak>Tocando a ${bpm} BPMs, ${sound}</speak>`;
             console.log({
                 speakOutput
             })
