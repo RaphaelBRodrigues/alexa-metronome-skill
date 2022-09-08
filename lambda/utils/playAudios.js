@@ -7,7 +7,7 @@ async function playAudio(responseBuilder, audios) {
 
   const audiosTag = urls.map((url) => {
       return `<audio src="${url}" />`; 
-  }).join(" ");
+  })[0] // .join(" ");
   
 
   return audiosTag;
