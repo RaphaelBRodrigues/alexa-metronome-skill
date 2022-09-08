@@ -18,7 +18,9 @@ const IntentsHandlers = (alexa, metronome) => {
             
             const sound = await metronome.play(bpm, handlerInput.responseBuilder);
             
-            const speakOutput = `<speak>Tocando a ${bpm} BPMs, ${sound}</speak>`;
+            const audioFile = '<audio src="https://s3.amazonaws.com/cdn.dabblelab.com/audio/one-small-step-for-man.mp3" />';
+
+            const speakOutput = `<speak>Tocando a ${bpm} BPMs, ${audioFile}</speak>`;
             console.log({
                 speakOutput
             })
