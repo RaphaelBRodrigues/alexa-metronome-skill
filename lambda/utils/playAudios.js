@@ -1,9 +1,8 @@
 const getS3SignedURL = require('./getS3SignedURL')
 
-async function playAudio(responseBuilder, audios) {;
+async function playAudio(responseBuilder, audios) {
   const urls = await Promise.all(audios.map(async (audio) => {
-      return "https://s3.amazonaws.com/cdn.dabblelab.com/audio/one-small-step-for-man.mp3";
-      //return await getS3SignedURL(audio.s3ObjectKey)
+      return await getS3SignedURL(audio.s3ObjectKey)
   }));
     console.log({
         urls

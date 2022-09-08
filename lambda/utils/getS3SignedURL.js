@@ -11,7 +11,7 @@ async function getS3SignedURL(objectKey) {
         Expires: 60*1
     });
 
-    return signedURL;
+    return "https://s3.amazonaws.com/cdn.dabblelab.com/audio/one-small-step-for-man.mp3";
 }
 
 
