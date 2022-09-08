@@ -1,5 +1,5 @@
 const Resources = {
-    Sound: {
+    Sounds: {
         tic: {
             s3ObjectKey: "Media/sounds/tic.mp3",
             token: "tic-sound",
