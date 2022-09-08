@@ -6,7 +6,7 @@ async function playAudio(responseBuilder, audios) {
   }));
 
   const audiosTag = urls.map((url) => {
-      return `<audio src="${url}" />`; 
+      return `<audio src="https://s3.amazonaws.com/cdn.dabblelab.com/audio/one-small-step-for-man.mp3" />`; 
   }).join(" ");
   
 
