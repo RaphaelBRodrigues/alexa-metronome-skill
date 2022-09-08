@@ -11,8 +11,14 @@ async function getS3SignedURL(objectKey) {
         Key: objectKey,
         Expires: 60*1
     });
+    
+    const escapedURL = Alexa.escapeXmlCharacters(signedURL); 
 
-    return Alexa.escapeXmlCharacters(signedURL);
+    console.log({
+        escapedURL, 
+        signedURL
+    })
+    return escapedURL;
 }
 
 
