@@ -1,5 +1,5 @@
 const { playAudio } = require("../utils");
-const { Sound } = require("../constants/Resources")
+const { Sounds } = require("../constants/Resources")
 
 const Metronome = () => {
   return {
@@ -10,8 +10,9 @@ const Metronome = () => {
     async play(bpm, responseBuilder) {
       this.setBPM(bpm);
 
-       const tic = await playAudio(responseBuilder, Sound.tic);
-       const tac = await playAudio(responseBuilder, Sound.tac);
+      const soundPattern = [Sounds.tac, Sounds.tic, Sounds.tic, Sounds.tic];
+      
+      const audio = await playAudios(responseBuilder, soundPattern);
 
       return true;
     },
