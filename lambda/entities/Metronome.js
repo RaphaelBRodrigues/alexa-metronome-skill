@@ -11,9 +11,7 @@ const Metronome = () => {
       this.setBPM(bpm);
 
       const soundPattern = [Sounds.tac, Sounds.tic, Sounds.tic, Sounds.tic];
-      console.log({
-          soundPattern
-      })
+
       const audio = await playAudios(responseBuilder, soundPattern);
 
       return true;
