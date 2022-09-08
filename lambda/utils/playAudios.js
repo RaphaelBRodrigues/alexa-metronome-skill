@@ -9,7 +9,7 @@ async function playAudio(responseBuilder, audios) {
       return `<audio src="${url}" />`; 
   }).join(" ");
   
-  console.log({audiosTag})
+
   return audiosTag;
   //return responseBuilder.addAudioPlayerPlayDirective("REPLACE_ALL", url, audio.token, audio.offsetInMilliseconds, null);
 }
