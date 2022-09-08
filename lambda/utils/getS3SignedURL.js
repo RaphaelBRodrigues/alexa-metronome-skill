@@ -1,4 +1,5 @@
 const AWS = require("aws-sdk");
+const Alexa = require('ask-sdk-core');
 
 const s3 = new AWS.S3({
     signatureVersion: 'v4'
@@ -11,7 +12,7 @@ async function getS3SignedURL(objectKey) {
         Expires: 60*1
     });
 
-    return "https://s3.amazonaws.com/cdn.dabblelab.com/audio/one-small-step-for-man.mp3";
+    return Alexa.escapeXmlCharacters(signedURL);
 }
 
 
