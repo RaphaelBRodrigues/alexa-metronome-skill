@@ -22,7 +22,9 @@ const IntentsHandlers = (alexa, metronome) => {
 
             const speakOutput = `<speak>Tocando a ${bpm} BPMs, ${sound}</speak>`;
             console.log({
-                speakOutput
+                speakOutput,
+                sound,
+                audioFile
             })
             
             return responseBuilder.speak(speakOutput).getResponse()
