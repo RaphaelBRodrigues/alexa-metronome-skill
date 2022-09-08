@@ -4,7 +4,9 @@ async function playAudio(responseBuilder, audios) {
   const urls = await Promise.all(audios.map(async (audio) => {
       return await getS3SignedURL(audio.s3ObjectKey)
   }));
-  
+  console.log({
+      urls
+  })
   const audiosTag = urls.map((url) => {
       return `<audio src="${url}" />`; 
   });
