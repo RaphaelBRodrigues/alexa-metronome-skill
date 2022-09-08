@@ -14,7 +14,7 @@ const Metronome = () => {
 
       const audio = await playAudios(responseBuilder, soundPattern);
 
-      return true;
+      return audio;
     },
     stop() {
       return true;
